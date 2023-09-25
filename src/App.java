@@ -33,5 +33,14 @@ public class App {
         double med_Ftot = (summa_f1+summa_f2)/2;
         System.out.println("Medelvärdet av fält1+2 = "+med_Ftot);
 
+        int[] fältSum= new int[5];
+        fältSum[0] = fält1[0]+fält2[0];
+        fältSum[1] = fält1[1]+fält2[1];
+        fältSum[2] = fält1[2]+fält2[2];
+        fältSum[3] = fält1[3]+fält2[3];
+        fältSum[4] = fält1[4]+fält2[4];
+
+        System.out.println("Summan av elementen i fält1+2: "+fältSum[0]+" "+fältSum[1]+" "+fältSum[2]+" "+fältSum[3]+" "+fältSum[4]);
+
     }
 }
