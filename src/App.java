@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) throws Exception {
+        Scanner puter = new Scanner(System.in);
     
         int[] fält1 = new int[5];
         fält1[0] = 8;
@@ -41,6 +44,22 @@ public class App {
         fältSum[4] = fält1[4]+fält2[4];
 
         System.out.println("Summan av elementen i fält1+2: "+fältSum[0]+" "+fältSum[1]+" "+fältSum[2]+" "+fältSum[3]+" "+fältSum[4]);
+        
+        int[] fältUser = new int[4];
+        System.out.println("Skriv in fyra heltal");
+        String in = puter.nextLine();
 
+        int space1 = in.indexOf(" ");
+        fältUser[0] = Integer.parseInt(in.substring(0, space1));
+        int space2 = in.indexOf(" ", space1+1);
+        fältUser[1] = Integer.parseInt(in.substring(space1+1, space2));
+        int space3 = in.indexOf(" ", space2+1);
+        fältUser[2] = Integer.parseInt(in.substring(space2+1, space3));
+        fältUser[3] = Integer.parseInt(in.substring(space3+1));
+
+        System.out.println();
+
+        int fältUser_sum = fältUser[0]+fältUser[1]+fältUser[2]+fältUser[3];
+        System.out.println("Summan av dina tal är: "+fältUser_sum);
     }
 }
